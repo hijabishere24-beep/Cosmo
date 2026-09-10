@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMOS // Cosmic Album</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">COSMOS<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planet.html">Planets</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="album.html" class="active">Album</a></li>
+      <li><a href="live-data.html">Live Data</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header" style="position: relative; z-index: 10;">
+    <h1>Cosmic Image Gallery</h1>
+    <p style="color: #a0aec0;">High-resolution captures of nebulae, distant galaxies, solar phenomena, and deep space structure.</p>
+  </div>
+
+  <main class="container" style="position: relative; z-index: 10;">
+
+    <!-- Sub-Page Directory Navigation -->
+    <h2 style="color: #00e5ff; margin-bottom: 1.5rem; text-align: center;">EXPLORE BY CATEGORY PAGES</h2>
+    <div class="grid-4" style="margin-bottom: 3.5rem;">
+      
+      <!-- Category 1 -->
+      <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div class="card-tag">5 IMAGES</div>
+        <h3 style="color: #fff; margin: 0.5rem 0;">Nebulae Gallery</h3>
+        <p style="color: #a0aec0; font-size: 0.9rem; margin-bottom: 1rem;">Carina, Pillars of Creation, Crab, Orion, and Tarantula nebulae.</p>
+        <a href="album-nebulae.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">View Nebulae Page &rarr;</a>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div class="card-tag">4 IMAGES</div>
+        <h3 style="color: #fff; margin: 0.5rem 0;">Galaxies Gallery</h3>
+        <p style="color: #a0aec0; font-size: 0.9rem; margin-bottom: 1rem;">Andromeda, Grand Design Spirals, Sombrero, and deep fields.</p>
+        <a href="album-galaxies.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">View Galaxies Page &rarr;</a>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div class="card-tag">4 IMAGES</div>
+        <h3 style="color: #fff; margin: 0.5rem 0;">Solar System</h3>
+        <p style="color: #a0aec0; font-size: 0.95rem; margin-bottom: 1rem;">Saturnian rings, solar flares, lunar craters, and Mars surface.</p>
+        <a href="album-solar.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">View Solar Page &rarr;</a>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="card" style="text-align: center; padding: 1.5rem;">
+        <div class="card-tag">3 IMAGES</div>
+        <h3 style="color: #fff; margin: 0.5rem 0;">Missions Gallery</h3>
+        <p style="color: #a0aec0; font-size: 0.9rem; margin-bottom: 1rem;">Orbital views, ISS solar arrays, and deep void field probes.</p>
+        <a href="album-missions.html" class="btn" style="padding: 0.5rem 1rem; font-size: 0.8rem;">View Missions Page &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- Quick In-Page Filter Bar -->
+    <h2 style="color: #fff; text-align: center; margin-bottom: 1rem;">All Media Showcase</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Media</button>
+      <button class="filter-btn" onclick="filterGallery('nebula', this)">Nebulae</button>
+      <button class="filter-btn" onclick="filterGallery('galaxy', this)">Galaxies</button>
+      <button class="filter-btn" onclick="filterGallery('system', this)">Solar System</button>
+      <button class="filter-btn" onclick="filterGallery('mission', this)">Missions</button>
+    </div>
+
+    <!-- Full Grid with Images -->
+    <div class="grid-3">
+
+      <!-- Nebulae -->
+      <div class="album-item nebula">
+        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" alt="Carina Nebula">
+        <div class="album-caption">
+          <h4>Carina Cosmic Cliffs</h4>
+          <p>JWST infrared view of star-forming region NGC 3324.</p>
+        </div>
+      </div>
+
+      <div class="album-item">
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQkOJe75RN4HWxSMzHRUnhsylTdoq88jWb0Yi9CfEXxsJ-hd2tK3fofo7Tk5wDed0vTYmtjHHmfUEwbpk3HAj2ZtjONLlxQMuC_" alt="Pillars of Creation">
+        <div class="album-caption">
+          <h4>Pillars of Creation</h4>
+          <p>Eagle Nebula columns composed of cold interstellar gas and dust.</p>
+        </div>
+      </div>
+
+      <div class="album-item nebula">
+        <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&fit=crop&w=800&q=80" alt="Supernova Remnant">
+        <div class="album-caption">
+          <h4>Crab Supernova Core</h4>
+          <p>Expanding shell surrounding a central dense neutron star.</p>
+        </div>
+      </div>
+
+      <!-- Galaxies -->
+      <div class="album-item galaxy">
+        <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80" alt="Andromeda Galaxy">
+        <div class="album-caption">
+          <h4>Andromeda Galaxy (M31)</h4>
+          <p>Our nearest major galactic neighbor, 2.5M light-years away.</p>
+        </div>
+      </div>
+
+      <div class="album-item galaxy">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Spiral Galaxy Arms">
+        <div class="album-caption">
+          <h4>Grand Design Spiral</h4>
+          <p>Luminous star clusters orbiting around a supermassive center.</p>
+        </div>
+      </div>
+
+      <!-- Solar System -->
+      <div class="album-item system">
+        <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80" alt="Saturn Ring System">
+        <div class="album-caption">
+          <h4>Saturnian Ring Architecture</h4>
+          <p>Extensive ice particle ring structures surrounding Saturn.</p>
+        </div>
+      </div>
+
+      <div class="album-item">
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSWvyb_adu1ljv8o2_UWFkRqaNp_BAw4WIrCM4rln8-g-DBGRDq44OdPpQRfHzeSiJOWmlC_jgz8cw48wTuPmgD66aSkN7nftqK" alt="Solar Coronal Mass Ejection">
+        <div class="album-caption">
+          <h4>Solar Dynamics & Prominence</h4>
+          <p>Extreme ultraviolet observation of solar magnetic plasma loops.</p>
+        </div>
+      </div>
+
+      <!-- Missions -->
+      <div class="album-item mission">
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80" alt="Earth view from orbit">
+        <div class="album-caption">
+          <h4>Orbital Reconnaissance</h4>
+          <p>Earth curvature viewed from low-Earth orbital altitude.</p>
+        </div>
+      </div>
+
+   <div class="album-item">
+        <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcT96wY8DCLZe_rBhUJzoE3Huxjo0pPoh_88gb3djDgxZhNvN1ypYxNp77jkCbAKeHJehfuq7kZ5VfenhDC5sIEwYtKsNwc0lvps" alt="Deep Void Deep Field">
+        <div class="album-caption">
+          <h4>Deep Void Deep Field</h4>
+          <p>Long-exposure composite capturing thousands of distant galaxies.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer style="position: relative; z-index: 10;">
+    <p>&copy; 2026 COSMOS Space Hub.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

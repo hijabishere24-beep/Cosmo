@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMOS // Planets</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">COSMOS<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="planet.html" class="active">Planets</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="album.html">Album</a></li>
+      <li><a href="live-data.html">Live Data</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Solar System Explorer</h1>
+    <p style="color: #a0aec0;">Detailed telemetry, atmosphere compositions, and orbital metrics for major worlds.</p>
+  </div>
+
+  <main class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterPlanets('all', this)">All Worlds</button>
+      <button class="filter-btn" onclick="filterPlanets('terrestrial', this)">Terrestrial (Rocky)</button>
+      <button class="filter-btn" onclick="filterPlanets('gas-giant', this)">Gas Giants</button>
+      <button class="filter-btn" onclick="filterPlanets('ice-giant', this)">Ice Giants</button>
+      <button class="filter-btn" onclick="filterPlanets('dwarf', this)">Dwarf Planets</button>
+    </div>
+
+    <!-- Planet Cards Grid -->
+    <div class="grid-2">
+
+      <!-- Mercury -->
+      <div class="card planet-item terrestrial">
+        <div class="card-tag">Planet 01 // Rocky</div>
+        <h3>MERCURY</h3>
+        <p class="subtitle">The Swift Planet</p>
+        <p><strong>Dist. from Sun:</strong> 57.9 million km</p>
+        <p><strong>Diameter:</strong> 4,879 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 3.7 m/s² (0.38x Earth)</p>
+          <p><strong>Moons:</strong> 0</p>
+          <p><strong>Day Length:</strong> 59 Earth Days</p>
+          <p><strong>Atmosphere:</strong> Minimal exosphere (Oxygen, Sodium, Hydrogen)</p>
+        </div>
+      </div>
+
+      <!-- Venus -->
+      <div class="card planet-item terrestrial">
+        <div class="card-tag">Planet 02 // Rocky</div>
+        <h3>VENUS</h3>
+        <p class="subtitle">Earth's Toxic Twin</p>
+        <p><strong>Dist. from Sun:</strong> 108.2 million km</p>
+        <p><strong>Diameter:</strong> 12,104 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 8.87 m/s² (0.90x Earth)</p>
+          <p><strong>Moons:</strong> 0</p>
+          <p><strong>Surface Temp:</strong> 465°C (Hottest planet)</p>
+          <p><strong>Atmosphere:</strong> 96.5% Carbon Dioxide, Sulfuric Acid clouds</p>
+        </div>
+      </div>
+
+      <!-- Earth -->
+      <div class="card planet-item terrestrial">
+        <div class="card-tag">Planet 03 // Rocky</div>
+        <h3>EARTH</h3>
+        <p class="subtitle">The Blue Marble</p>
+        <p><strong>Dist. from Sun:</strong> 149.6 million km</p>
+        <p><strong>Diameter:</strong> 12,742 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 9.807 m/s² (1.0x Earth)</p>
+          <p><strong>Moons:</strong> 1 (The Moon)</p>
+          <p><strong>Orbital Period:</strong> 365.25 Days</p>
+          <p><strong>Atmosphere:</strong> 78% Nitrogen, 21% Oxygen</p>
+        </div>
+      </div>
+
+      <!-- Mars -->
+      <div class="card planet-item terrestrial">
+        <div class="card-tag">Planet 04 // Rocky</div>
+        <h3>MARS</h3>
+        <p class="subtitle">The Red Planet</p>
+        <p><strong>Dist. from Sun:</strong> 227.9 million km</p>
+        <p><strong>Diameter:</strong> 6,779 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 3.721 m/s² (0.38x Earth)</p>
+          <p><strong>Moons:</strong> 2 (Phobos & Deimos)</p>
+          <p><strong>Day Length:</strong> 24h 37m</p>
+          <p><strong>Atmosphere:</strong> 95% Carbon Dioxide</p>
+        </div>
+      </div>
+
+      <!-- Jupiter -->
+      <div class="card planet-item gas-giant">
+        <div class="card-tag">Planet 05 // Gas Giant</div>
+        <h3>JUPITER</h3>
+        <p class="subtitle">King of Planets</p>
+        <p><strong>Dist. from Sun:</strong> 778.5 million km</p>
+        <p><strong>Diameter:</strong> 139,820 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 24.79 m/s² (2.52x Earth)</p>
+          <p><strong>Moons:</strong> 95 confirmed</p>
+          <p><strong>Day Length:</strong> 9h 56m</p>
+          <p><strong>Atmosphere:</strong> 90% Hydrogen, 10% Helium</p>
+        </div>
+      </div>
+
+      <!-- Saturn -->
+      <div class="card planet-item gas-giant">
+        <div class="card-tag">Planet 06 // Gas Giant</div>
+        <h3>SATURN</h3>
+        <p class="subtitle">The Ringed Wonder</p>
+        <p><strong>Dist. from Sun:</strong> 1.43 billion km</p>
+        <p><strong>Diameter:</strong> 116,460 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 10.44 m/s² (1.06x Earth)</p>
+          <p><strong>Moons:</strong> 146 confirmed</p>
+          <p><strong>Rings:</strong> 7 main ring groups made of ice & rock</p>
+          <p><strong>Atmosphere:</strong> Hydrogen & Helium blend</p>
+        </div>
+      </div>
+
+      <!-- Uranus -->
+      <div class="card planet-item ice-giant">
+        <div class="card-tag">Planet 07 // Ice Giant</div>
+        <h3>URANUS</h3>
+        <p class="subtitle">The Sideways Planet</p>
+        <p><strong>Dist. from Sun:</strong> 2.87 billion km</p>
+        <p><strong>Diameter:</strong> 50,724 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 8.69 m/s² (0.89x Earth)</p>
+          <p><strong>Moons:</strong> 28 confirmed</p>
+          <p><strong>Axial Tilt:</strong> 97.8° (Orbits on its side)</p>
+          <p><strong>Atmosphere:</strong> Hydrogen, Helium, Methane</p>
+        </div>
+      </div>
+
+      <!-- Neptune -->
+      <div class="card planet-item ice-giant">
+        <div class="card-tag">Planet 08 // Ice Giant</div>
+        <h3>NEPTUNE</h3>
+        <p class="subtitle">The Windy World</p>
+        <p><strong>Dist. from Sun:</strong> 4.5 billion km</p>
+        <p><strong>Diameter:</strong> 49,244 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 11.15 m/s² (1.14x Earth)</p>
+          <p><strong>Moons:</strong> 16 confirmed</p>
+          <p><strong>Winds:</strong> Up to 2,100 km/h (Fastest in solar system)</p>
+          <p><strong>Atmosphere:</strong> Hydrogen, Helium, Methane</p>
+        </div>
+      </div>
+
+      <!-- Pluto -->
+      <div class="card planet-item dwarf">
+        <div class="card-tag">Outer Kuiper Belt // Dwarf Planet</div>
+        <h3>PLUTO</h3>
+        <p class="subtitle">The Ice World</p>
+        <p><strong>Dist. from Sun:</strong> 5.9 billion km</p>
+        <p><strong>Diameter:</strong> 2,376 km</p>
+        <button class="btn" onclick="toggleDetails(this)">View Specs</button>
+        <div class="details-box">
+          <p><strong>Gravity:</strong> 0.62 m/s² (0.06x Earth)</p>
+          <p><strong>Moons:</strong> 5 (Charon is largest)</p>
+          <p><strong>Surface:</strong> Nitrogen ice, Water ice mountains</p>
+          <p><strong>Classification:</strong> Reclassified as Dwarf Planet in 2006</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick Comparison Table Section -->
+    <section style="margin-top: 5rem;">
+      <h2 style="color: #00e5ff; font-family: 'Orbitron', sans-serif; text-align: center; margin-bottom: 2rem;">
+        Planetary Telemetry Overview
+      </h2>
+      
+      <div style="overflow-x: auto;">
+        <table class="planet-table">
+          <thead>
+            <tr>
+              <th>Planet</th>
+              <th>Type</th>
+              <th>Moons</th>
+              <th>Avg Temp</th>
+              <th>Orbital Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mercury</strong></td>
+              <td>Terrestrial</td>
+              <td>0</td>
+              <td>167°C</td>
+              <td>88 Days</td>
+            </tr>
+            <tr>
+              <td><strong>Venus</strong></td>
+              <td>Terrestrial</td>
+              <td>0</td>
+              <td>464°C</td>
+              <td>225 Days</td>
+            </tr>
+            <tr>
+              <td><strong>Earth</strong></td>
+              <td>Terrestrial</td>
+              <td>1</td>
+              <td>15°C</td>
+              <td>365.25 Days</td>
+            </tr>
+            <tr>
+              <td><strong>Mars</strong></td>
+              <td>Terrestrial</td>
+              <td>2</td>
+              <td>-65°C</td>
+              <td>687 Days</td>
+            </tr>
+            <tr>
+              <td><strong>Jupiter</strong></td>
+              <td>Gas Giant</td>
+              <td>95</td>
+              <td>-110°C</td>
+              <td>12 Years</td>
+            </tr>
+            <tr>
+              <td><strong>Saturn</strong></td>
+              <td>Gas Giant</td>
+              <td>146</td>
+              <td>-140°C</td>
+              <td>29.5 Years</td>
+            </tr>
+            <tr>
+              <td><strong>Uranus</strong></td>
+              <td>Ice Giant</td>
+              <td>28</td>
+              <td>-195°C</td>
+              <td>84 Years</td>
+            </tr>
+            <tr>
+              <td><strong>Neptune</strong></td>
+              <td>Ice Giant</td>
+              <td>16</td>
+              <td>-200°C</td>
+              <td>165 Years</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 COSMOS Space Hub.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
